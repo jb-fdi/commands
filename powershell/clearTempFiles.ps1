@@ -1,4 +1,4 @@
-function clearFiles(){
+
   
   $start = (Get-Volume -DriveLetter c).SizeRemaining
   
@@ -103,4 +103,3 @@ function clearFiles(){
   
 
 
-}
