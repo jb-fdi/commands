@@ -1,3 +1,6 @@
+Might require tls 1.2 forced on
+``` [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 ```
+
 Get list of failed logins 
 ```
 (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/getFailedLogins.ps1') | iex;
