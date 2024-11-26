@@ -27,3 +27,8 @@ Resetting vss services for veeam to run
 (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/VSSreset.ps1') | iex;
 ```
 
+Webroot removal
+
+```
+(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/webrootRemove.ps1') | iex;
+```
