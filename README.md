@@ -13,7 +13,7 @@ Get list of IPs failing to connect to server
 
 Clearing cache files of workstations/servers with multiple users 
 ```
-(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/ClearCachFiles.ps1') | iex;
+(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/ClearCacheFiles.ps1') | iex;
 
 ```
 
