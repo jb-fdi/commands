@@ -40,6 +40,8 @@ $clear_paths = @(
     '\AppData\Local\Google\Chrome\User Data\*\Code Cache\*\'
     '\AppData\Local\Google\Chrome\User Data\*\Cache\Cache_Data\'
     '\AppData\Roaming\Slack\Service Worker\CacheStorage\*'
+    '\AppData\Roaming\Avaya Cloud\Service Worker\CacheStorage\*\*\*\*'
+
 
 )
 
