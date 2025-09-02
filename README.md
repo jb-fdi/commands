@@ -1,16 +1,6 @@
 Might require tls 1.2 forced on
 ``` [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 ```
 
-Get list of failed logins 
-```
-(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/getFailedLogins.ps1') | iex;
-```
-
-Get list of IPs failing to connect to server 
-```
-(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/getInetfailedLogins.ps1') | iex;
-```
-
 Clearing cache files of workstations/servers with multiple users 
 ```
 (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/ClearCacheFiles.ps1') | iex;
@@ -33,6 +23,21 @@ Webroot removal
 (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/webrootRemove.ps1') | iex;
 ```
 
+# windows server
+
+Get list of IPs failing to connect to server 
+```
+(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/getInetfailedLogins.ps1') | iex;
+```
+
+Get list of failed logins 
+```
+(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/getFailedLogins.ps1') | iex;
+```
+Generate last logon report
+```
+(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/lastlogonreport.ps1') | iex;
+```
 
 # Linux
 
