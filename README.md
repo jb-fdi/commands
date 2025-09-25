@@ -8,7 +8,7 @@ You will need to pass a bitdefender url found in the [download links](https://ww
 (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/BitdefenderInstaller.ps1') | iex;
 
 ```
-Example:  (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/BitdefenderInstaller.ps1') | iex; InstallBitdefender -url <bitdefender url>
+Example:  (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/BitdefenderInstaller.ps1') | iex; InstallBitdefender -url \<bitdefender url\>
 
 
 ## Clearing cache files of workstations/servers with multiple users 
