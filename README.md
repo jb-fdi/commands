@@ -8,7 +8,7 @@ You will need to replace the bitdefender url found in the [download links](https
 (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/BitdefenderInstaller.ps1') | iex; InstallBitdefender -url <bitdefender url>
 
 ```
-
+Example: (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/BitdefenderInstaller.ps1') | iex; InstallBitdefender -url "https://cloud.gravityzone.bitdefender.com/Packages/BSTWIN/0/somespecificurl.exe"
 
 ## Clearing cache files of workstations/servers with multiple users 
 ```
