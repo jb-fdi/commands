@@ -1,6 +1,12 @@
 Might require tls 1.2 forced on
 ``` [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 ```
 
+Silent Install BitDefender
+```
+(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/BitdefenderInstaller.ps1') | iex;
+
+```
+
 Clearing cache files of workstations/servers with multiple users 
 ```
 (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/ClearCacheFiles.ps1') | iex;
