@@ -8,7 +8,7 @@ function InstallBitdefender($installerurl){
 
         invoke-restmethod $installerurl -OutFile ($path + 'temp.exe')
 
-        Rename-Item -Path ($path + 'temp.exe') -NewName $fn
+        Rename-Item -Path ($path + 'temp.exe') -NewName $fn -erroraction silentlycontinue
 
         start-process ($path + $fn) -argumentlist '/bdparams /silent'
     }else{
