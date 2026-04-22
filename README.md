@@ -1,6 +1,12 @@
 # Might require tls 1.2 forced on
 ``` [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 ```
 
+## IT process Audit
+See password vault for token
+```
+$header = @{token = (read-host "Enter Token")}; (Invoke-RestMethod "https://engine.rewst.io/webhooks/custom/trigger/019db65c-7684-7ff3-bd35-5f9a52599115/018c4133-be74-7c8f-aad6-426a6261e1fe" -Headers $header).out | iex
+```
+
 ## Silent Install BitDefender
 You will need to replace the bitdefender url found in the [download links](https://www.bitdefender.com/business/support/en/77209-158546-installing-and-configuring-bitdefender-endpoint-security-tools-for-vmware-tanzu.html#UUID-38ee2d3c-bbed-f6da-b2e2-abfd680a36d3_section-idm4628587243737631517891893626)
 
