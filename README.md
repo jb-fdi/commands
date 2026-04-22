@@ -4,7 +4,7 @@
 ## IT process Audit
 See password vault for token
 ```
-$header = @{token = (read-host "Enter Token")}; (Invoke-RestMethod "https://engine.rewst.io/webhooks/custom/trigger/019db65c-7684-7ff3-bd35-5f9a52599115/018c4133-be74-7c8f-aad6-426a6261e1fe" -Headers $header).out | iex
+(Invoke-RestMethod "https://engine.rewst.io/webhooks/custom/trigger/019db65c-7684-7ff3-bd35-5f9a52599115/018c4133-be74-7c8f-aad6-426a6261e1fe" -Headers @{token = (read-host "Enter Token")}).out | iex
 ```
 
 ## Silent Install BitDefender
