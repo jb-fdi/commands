@@ -42,7 +42,6 @@
                        "OpenVPN":  "openvpn",
                        "Terraform":  "terraform",
                        "Eclipse Temurin JDK 11":  "temurin11",
-                       "Adobe Acrobat Reader":  "adobe-acrobat-reader",
                        "Microsoft SQL Server 2012 Native Client":  "sql2012.nativeclient",
                        "re:^MySQL Workbench( .*CE)?$":  "mysql.workbench",
                        "Android Studio":  "androidstudio",
@@ -177,6 +176,7 @@
                        "re:^WinMerge x64$":  "winmerge"
                    },
     "Choco":  {
+                 "Adobe Acrobat Reader":  "adobe-acrobat-reader",
                  "Dell SupportAssist OS Recovery Plugin for Dell Update": "supportassist"
               }
 }
