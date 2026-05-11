@@ -55,7 +55,6 @@
                        "Kodi":  "kodi",
                        "re:^Microsoft Visual Studio Code$":  "vscode",
                        "PuTTY":  "putty",
-                       "re:^7[- ]Zip( .*?)?( \\(x64\\))?$":  "7zip",
                        "Spotify":  "spotify",
                        "re:^Mozilla Thunderbird( \\(x64 en-US\\))?$":  "thunderbird",
                        "Brave":  "brave",
@@ -177,6 +176,7 @@
                    },
     "Choco":  {
                  "Adobe Acrobat Reader":  "adobe-acrobat-reader",
+                 "re:^7[- ]Zip( .*?)?( \\(x64\\))?$":  "7zip",
                  "Dell SupportAssist OS Recovery Plugin for Dell Update": "supportassist"
               }
 }
