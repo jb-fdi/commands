@@ -10,12 +10,12 @@ See password vault for token
 ## Silent Install BitDefender
 You will need to replace the bitdefender url found in the [download links](https://www.bitdefender.com/business/support/en/77209-158546-installing-and-configuring-bitdefender-endpoint-security-tools-for-vmware-tanzu.html#UUID-38ee2d3c-bbed-f6da-b2e2-abfd680a36d3_section-idm4628587243737631517891893626)
 
-```
+``` powershell
 (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/BitdefenderInstaller.ps1') | iex; InstallBitdefender -installerurl <bitdefender url>
 
 ```
 Example: 
-```cmd
+``` cmd
 powershell.exe "(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/refs/heads/main/powershell/BitdefenderInstaller.ps1') | iex; InstallBitdefender -installerurl 'https://cloud.gravityzone.bitdefender.com/Packages/BSTWIN/0/somespecificurl.exe'"
 ```
 
