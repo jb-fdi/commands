@@ -1,5 +1,24 @@
-start-process "c:\program files (x86)\webroot\wrsa.exe" -argumentlist "/uninstall" -wait
+if(test-path "c:\Program Files (x86)\webroot\wrsa.exe"){
+    $path = "c:\Program Files (x86)\webroot\wrsa.exe"
+}elseif(test-path "c:\Program Files\webroot\wrsa.exe"){
+   $path = "c:\Program Files\webroot\wrsa.exe"
+}else{
+    exit
+}
 
+
+start-process $path -ArgumentList "-poll"  -wait
+sleep 30
+start-process $path -ArgumentList "-poll"  -wait
+sleep 30
+start-process $path -ArgumentList "-poll"  -wait
+sleep 30
+
+start-process $path -ArgumentList "-uninstall"  -wait
+sleep 30
+
+start-process "c:\program files (x86)\webroot\wrsa.exe" -argumentlist "/uninstall" -wait
+sleep 30
 # Removes Webroot SecureAnywhere by force
 # Run the script once, reboot, then run again
 
@@ -35,10 +54,10 @@ $RegStartupPaths = @(
 
 # Webroot SecureAnywhere folders
 $Folders = @(
-    "%ProgramData%\WRData",
-    "%ProgramFiles%\Webroot",
-    "%ProgramFiles(x86)%\Webroot",
-    "%ProgramData%\Microsoft\Windows\Start Menu\Programs\Webroot SecureAnywhere"
+    "$env:ProgramData\WRData",
+    "$env:ProgramFiles\Webroot",
+    "${env:ProgramFiles(x86)}\Webroot",
+    "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Webroot SecureAnywhere"
 )
 
 # Stop & Delete Webroot SecureAnywhere service
