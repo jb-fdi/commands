@@ -362,7 +362,7 @@ $errorCodes = @{
 }
 
 foreach ($code in $errorCodes.Keys | Sort-Object) {
-    Write-Entry ("{0}  →  {1}" -f $code, $errorCodes[$code])
+    Write-Entry ("{0}  ->  {1}" -f $code, $errorCodes[$code])
 }
 
 
