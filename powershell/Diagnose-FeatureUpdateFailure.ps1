@@ -407,6 +407,3 @@ Write-Host "`n✔ Report saved to: $reportFile" -ForegroundColor Green
 if ($OpenReport) {
     Start-Process notepad.exe $reportFile
 }
-
-Write-Host "`nTip: Run again with -RunSetupDiag for deeper analysis using Microsoft SetupDiag tool." -ForegroundColor DarkGray
-Write-Host "Tip: Run with -OpenReport to open the report in Notepad automatically.`n" -ForegroundColor DarkGray
