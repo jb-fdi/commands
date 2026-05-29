@@ -143,9 +143,9 @@ if (Test-Path $upgradeKey) {
 
 
 # ─────────────────────────────────────────────
-# 4. Event Log — Setup Events
+# 4. Event Log - Setup Events
 # ─────────────────────────────────────────────
-Write-Section "EVENT LOG — SETUP (Errors & Warnings, last 48h)"
+Write-Section "EVENT LOG - SETUP (Errors & Warnings, last 48h)"
 
 $since = (Get-Date).AddHours(-48)
 $setupEvents = Get-WinEvent -FilterHashtable @{
@@ -165,9 +165,9 @@ if ($setupEvents) {
 
 
 # ─────────────────────────────────────────────
-# 5. Event Log — Windows Update Errors
+# 5. Event Log - Windows Update Errors
 # ─────────────────────────────────────────────
-Write-Section "EVENT LOG — WINDOWS UPDATE (Errors, last 48h)"
+Write-Section "EVENT LOG - WINDOWS UPDATE (Errors, last 48h)"
 
 $wuEvents = Get-WinEvent -FilterHashtable @{
     LogName   = 'System'
@@ -186,9 +186,9 @@ if ($wuEvents) {
 
 
 # ─────────────────────────────────────────────
-# 6. CBS Log — Recent Errors
+# 6. CBS Log - Recent Errors
 # ─────────────────────────────────────────────
-Write-Section "CBS LOG — RECENT ERRORS (Last 100 error lines)"
+Write-Section "CBS LOG - RECENT ERRORS (Last 100 error lines)"
 
 $cbsLog = "$env:windir\Logs\CBS\CBS.log"
 if (Test-Path $cbsLog) {
@@ -208,7 +208,7 @@ if (Test-Path $cbsLog) {
 # ─────────────────────────────────────────────
 # 7. Windows Setup (Panther) Log
 # ─────────────────────────────────────────────
-Write-Section "WINDOWS SETUP PANTHER LOG — ERRORS"
+Write-Section "WINDOWS SETUP PANTHER LOG - ERRORS"
 
 $pantherPaths = @(
     "$env:windir\Panther\setuperr.txt",
@@ -283,7 +283,7 @@ if (Test-Path $cbsLog) {
 # DISM log
 $dismLog = "$env:windir\Logs\DISM\dism.log"
 if (Test-Path $dismLog) {
-    Write-Entry "`nDISM Log — Recent Errors:"
+    Write-Entry "`nDISM Log - Recent Errors:"
     Get-Content $dismLog -Tail 3000 |
         Where-Object { $_ -match "error|fail" } |
         Select-Object -Last 20 |
@@ -346,19 +346,19 @@ if ($RunSetupDiag) {
 Write-Section "COMMON FEATURE UPDATE ERROR CODES"
 
 $errorCodes = @{
-    "0x80070070" = "Not enough disk space — free up at least 20 GB on C:"
-    "0x80070020" = "File in use by another process — check antivirus / third-party apps"
-    "0x8007002C" = "CBS package installation failed — run SFC and DISM"
-    "0x80070002" = "File not found — source files missing or corrupted"
-    "0xC1900101" = "Driver compatibility issue — update or uninstall problematic drivers"
+    "0x80070070" = "Not enough disk space - free up at least 20 GB on C:"
+    "0x80070020" = "File in use by another process - check antivirus / third-party apps"
+    "0x8007002C" = "CBS package installation failed - run SFC and DISM"
+    "0x80070002" = "File not found - source files missing or corrupted"
+    "0xC1900101" = "Driver compatibility issue - update or uninstall problematic drivers"
     "0xC1900200" = "PC doesn't meet minimum requirements for this update"
-    "0xC1900208" = "Incompatible app blocking update — check compatibility report"
-    "0x80070005" = "Access denied — check permissions or conflicting security software"
-    "0x80070017" = "Media is corrupted — re-download update media"
-    "0x800700B7" = "Cannot create a file that already exists — Windows Update cleanup needed"
-    "0x80073712" = "Windows Update component store is corrupted — run DISM /RestoreHealth"
-    "0x8007001F" = "General device failure — check hardware and drivers"
-    "0xC1900107" = "Cleanup condition not met from previous upgrade attempt — reboot required"
+    "0xC1900208" = "Incompatible app blocking update - check compatibility report"
+    "0x80070005" = "Access denied - check permissions or conflicting security software"
+    "0x80070017" = "Media is corrupted - re-download update media"
+    "0x800700B7" = "Cannot create a file that already exists - Windows Update cleanup needed"
+    "0x80073712" = "Windows Update component store is corrupted - run DISM /RestoreHealth"
+    "0x8007001F" = "General device failure - check hardware and drivers"
+    "0xC1900107" = "Cleanup condition not met from previous upgrade attempt - reboot required"
 }
 
 foreach ($code in $errorCodes.Keys | Sort-Object) {
