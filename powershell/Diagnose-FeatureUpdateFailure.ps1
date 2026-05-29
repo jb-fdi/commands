@@ -402,7 +402,7 @@ Write-Entry $fixes
 # Save report
 # ─────────────────────────────────────────────
 $report | Out-File -FilePath $reportFile -Encoding UTF8
-Write-Host "`n✔ Report saved to: $reportFile" -ForegroundColor Green
+Write-Host "`nReport saved to: $reportFile" -ForegroundColor Green
 
 if ($OpenReport) {
     Start-Process notepad.exe $reportFile
