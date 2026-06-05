@@ -172,11 +172,16 @@
                        "Vivaldi":  "vivaldi",
                        "pgAdmin 4":  "pgadmin4",
                        "re:^AutoHotkey$":  "autohotkey",
-                       "re:^WinMerge x64$":  "winmerge"
+                       "re:^WinMerge x64$":  "winmerge",
+                       "GoTo Opener (Multi User)":  "gotoopener",
+                       "re:^7[- ]Zip( .*?)?( \\(x64\\))?$":  "7zip"
+                       
                    },
     "Choco":  {
                  "Adobe Acrobat Reader":  "adobe-acrobat-reader",
-                 "re:^7[- ]Zip( .*?)?( \\(x64\\))?$":  "7zip",
-                 "Dell SupportAssist OS Recovery Plugin for Dell Update": "supportassist"
+                 "Mozilla Firefox ESR (x64 en-US)":  "firefoxesr",
+                 "Dell SupportAssist OS Recovery Plugin for Dell Update": "supportassist",
+                 "Dell SupportAssist":  "supportassist",
+                 "Local Administrator Password Solution":  "laps"
               }
 }
