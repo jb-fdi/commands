@@ -31,6 +31,11 @@ powershell.exe "(new-object Net.WebClient).DownloadString('https://raw.githubuse
 (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/clearTempFiles.ps1') | iex;
 ```
 
+## remove bloatware apps
+```
+(new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/debloat.ps1') | iex;
+```
+
 ## Resetting vss services for veeam to run
 ```
 (new-object Net.WebClient).DownloadString('https://raw.githubusercontent.com/jb-fdi/commands/main/powershell/VSSreset.ps1') | iex;
